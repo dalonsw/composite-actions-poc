@@ -11,6 +11,9 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+        
     - name: Pegar resultado
       uses: ./composite-action-1
       with:
