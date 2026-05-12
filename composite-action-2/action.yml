@@ -12,6 +12,6 @@ runs:
   using: "composite"
   steps:
     - name: Pegar resultado
-      uses: ./composite-action-1/action.yml
+      uses: ./composite-action-1
       with:
         name: ${{ inputs.name }}
