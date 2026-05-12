@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+    inputs:
+        name:
+          description: Username
+          required: false
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Teste
+        uses: ./composite-action-2/action.yml
