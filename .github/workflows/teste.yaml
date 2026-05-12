@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Teste
-        uses: ./composite-action-2/action.yml
+        uses: ./composite-action-2
