@@ -1,0 +1,9 @@
+name: 'Composite Action 2'
+
+description: 'Composite Action 2'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Pegar resultado
+      uses: ./composite-action-1/action.yml
