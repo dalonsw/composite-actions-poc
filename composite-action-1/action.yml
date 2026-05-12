@@ -1,0 +1,28 @@
+name: 'Composite Action 1'
+
+description: 'Composite Action 1'
+
+inputs:
+  name:
+    description: Username
+    required: false
+    default: ${{ github.actor }}
+
+outputs:
+  saida:
+    description: Saida do valor
+    value: ${{ steps.teste.outputs.result }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Saudações
+      if: ${{ inputs.name }}
+      run: echo "Olá ${{ inputs.name }}"
+      shell: bash
+
+    - name: Teste
+      id: teste
+      run:  echo "result=$(echo resultado)" >> $GITHUB_OUTPUT
+      working-directory: ${{ inputs.work_dir }}
+      shell: bash
